@@ -1,6 +1,6 @@
 {
-  "homepage": "http://mohammadnejat.github.io/shopp",
-  "name": "Shoping",
+  "homepage": "http://mohammadnejat.github.io/shoping",
+  "name": "ShopPage",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

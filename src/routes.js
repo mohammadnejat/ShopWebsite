@@ -10,7 +10,7 @@ import Info from "./Pages/UserProfile/info/Info"
 
 let routes = [
     { path: "/", element: <Home />},
-    { path: "/home", element: <Home />},
+    { path: "/homepage", element: <Home />},
     { path: "/Products", element: <Products />},
     { path: "/Product/:id", element: <Product />},
     { path: "/About", element: <About />},

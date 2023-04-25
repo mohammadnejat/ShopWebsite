@@ -25,7 +25,7 @@ const Product = () => {
 
     const param = useParams()
 
-    const product = Products.find(product => product.id == param.id)
+    const product = Products.find(product => product.id === param.id)
     const notify = () => toast.success('با موفقیت به سبد اضافه شد', {
         position: "top-right",
         autoClose: 3000,
