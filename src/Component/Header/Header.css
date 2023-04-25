@@ -1,0 +1,230 @@
+
+.topHeader {
+    display: flex;
+    justify-content: space-between;
+    height: 1rem;
+}
+
+.topHeader div {
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 20vw auto;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.header .menu ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header .user-config {
+    display: flex;
+    justify-content: center;
+}
+
+.header .menu ul a {
+    transition: 0.3s ease;
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 20px 0;
+    margin: 0 20px;
+    position: relative;
+}
+
+.header .menu ul a:hover {
+    border-top: 4px solid #0323d8;
+    border-bottom: 4px solid #0323d8;
+    padding: 6px 0;
+}
+
+.header .menu .menu-navitems {
+
+    display: none;
+    transition: all 0.4s ease;
+}
+
+.header .menu .menu-navitems.active {
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    background-color: #eff0f7;
+    z-index: 999;
+    width: 100px;
+    padding: 0;
+}
+
+.header .menu .menu-navitems {
+    background-color: #ffffff;
+}
+
+.header .menu .menu-navitems li {
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.header .menu .menu-navitems li:hover {
+    box-shadow: inset 100px 20px 20px 100px #54b3d6;
+    color: white;
+}
+
+
+.header .user-config div {
+    margin-left: 1rem;
+}
+
+.header .user-config .menu-icon .icon-link .icons {
+    position: relative;
+    cursor: pointer;
+    margin-left: 1rem;
+    padding: 0.6rem;
+    border-radius: 1rem;
+    border: 1px solid black;
+    transition: all 0.3s ease;
+}
+
+.header .user-config .menu-icon .icon-link .icons:hover {
+    background-color: rgb(35, 77, 214);
+    color: white;
+}
+
+.header .user-config .menu-icon .icon-link .icons .icon-count {
+    background: #C40316;
+    color: #fff;
+    font-size: 13px;
+    height: 22px;
+    right: -12px;
+    line-height: 22px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translatey(-50%);
+    width: 22px;
+    z-index: 999;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+}
+
+.header-bottom {
+    display: grid;
+    grid-template-columns: 20vw 50vw 30vw;
+    text-align: center;
+    align-items: center;
+    align-items: baseline;
+    padding: 2rem 0;
+}
+
+.menu-dropdown-right {
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+    position: relative;
+    padding: 1rem 1rem;
+    border-radius: 0.5rem;
+    width: 15rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.menu-dropdown-right:hover {
+
+}
+
+.menu-dropdown-right a {
+    padding: 0 3rem;
+}
+
+.menu-allproducts {
+    display: none;
+    margin-top: 2.5rem;
+
+}
+
+.menu-allproducts li {
+    box-shadow: inset 0 0 0 0 #54b3d6;
+    background-color: #eee;
+    color: #54b3d6;
+    margin-top: 0.3rem;
+    padding: 1rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    border-radius: 1rem;
+    box-shadow: -1px 4px 31px 14px rgba(122,203,236,0.48);
+-webkit-box-shadow: -1px 4px 31px 14px rgba(122,203,236,0.48);
+-moz-box-shadow: -1px 4px 31px 14px rgba(122,203,236,0.48);
+
+}
+
+.menu-allproducts li:hover {
+    box-shadow: inset 100px 0 0 0 #54b3d6;
+    color: white;
+}
+
+.menu-allproducts.active {
+    display: block;
+    position: absolute;
+    z-index: 999;
+    top: 100%;
+}
+
+.menu-dropdown-center {
+    display: flex;
+    align-items: baseline;
+}
+
+.menu-dropdown-allproducts {
+    width: 10rem;
+    border-radius: 0 1rem 1rem 0;
+    padding: 1rem;
+}
+
+.menu-dropdown-center .btn-search {
+    border-radius: 0;
+    padding: 1rem;
+    color: #fff;
+}
+
+.menu-dropdown-left {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 0.7rem;
+    padding: 1rem;
+}
+
+.menu-dropdown-left span {
+    color: #fff;
+
+}
+
+@media screen and (max-width: 1024px) {
+
+    .menu-dropdown-right {
+        display: none;
+    }
+
+    .menu-dropdown-left {
+        display: none;
+    }
+
+    .header-bottom {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        display: none;
+    }
+
+    .topHeader {
+        display: none;
+    }
+
+
+}
+

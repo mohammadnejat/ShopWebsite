@@ -1,17 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+import { SessionContextProvider } from '@supabase/auth-helpers-react';
+
+import { createClient } from "@supabase/supabase-js";
+
+
+const supabaseUrl = 'https://faisymyiqxclwdmyttcl.supabase.co';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZhaXN5bXlpcXhjbHdkbXl0dGNsIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODA2NDc5MDcsImV4cCI6MTk5NjIyMzkwN30.9mTJyzSNnsZdZv4l10Db2V-vKmYXt63XQxLNEX45NaA';
+
+const supabase = createClient(supabaseUrl, supabaseKey);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <BrowserRouter>
+        <SessionContextProvider supabaseClient={supabase}>
+            <App />
+        </SessionContextProvider>
+    </BrowserRouter>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

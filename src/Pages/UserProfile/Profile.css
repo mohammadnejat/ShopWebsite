@@ -1,0 +1,42 @@
+ul {
+    padding: 0;
+}
+.profile {
+    display: grid;
+    gap: 1.8rem;
+    grid-template-columns: auto 80%;
+    margin: 0 auto;
+    width: 88%;
+}
+
+
+
+/* Middle Section */ 
+
+.middle {
+    position: relative;
+    border: 1px solid rgba(196, 192, 192, 0.338);
+    border-radius: 20px;
+}
+
+.middle .middle-header {
+    display: flex;
+    gap: 2rem;
+    margin: 1rem 1rem 0 0;
+    color: rgb(87, 159, 181);
+}
+
+.middle .middle-data {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10rem auto;
+}
+
+.middle .middle-data .middle-databox {
+    display: flex;
+    gap: 1rem;
+}
+
+.middle .middle-data .middle-databox .middle-dataicon img {
+    height: 65px;
+}

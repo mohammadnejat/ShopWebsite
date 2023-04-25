@@ -1,0 +1,21 @@
+.products {
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid black;
+    margin: 0 auto;
+    width: 85%;
+}
+
+.listproducts {
+    border-bottom: 1px solid black;
+    padding: 1rem;
+}
+
+.listproducts .link {
+    margin-right: 2rem;
+}
+
+.products-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr)
+}

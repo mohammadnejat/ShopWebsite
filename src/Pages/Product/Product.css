@@ -1,0 +1,148 @@
+
+.productBox {
+    margin: 0 auto;
+    width: 95%;
+    background-color: #fff;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 520px 1fr;
+}
+
+.productImage {
+    border: 1px solid #eee;
+}
+
+.productImage img {
+    height: 500px;
+    width: 500px;
+    padding: 1rem;
+}
+
+.productLeft {
+    margin-right: 1rem;
+    
+}
+.productDash-line {
+    margin-top: 1rem;
+    width: 100%;
+    border: 1px dashed #ddd;
+}
+
+.productPrice span {
+    font-size: 20px;
+    font-weight: 500;
+    color: #0063d1;
+    letter-spacing: -.01em;
+    
+}
+
+.leftBoxes {
+    float: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.leftBoxes .leftFeaturs {
+    float: left;
+    margin-bottom: 4px;
+    padding-right: 8px;
+    border: 1px dashed #eee;
+    padding: 0 2rem;
+    margin: 0.5rem;
+}
+
+
+.leftBoxes .leftFeaturs .box-icons {
+    font-size: 1.2rem;
+    color: forestgreen;
+}
+.stack {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.stack input {
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #eee;
+}
+
+.input-buttons {
+    position: relative;
+}
+
+.input-buttons div {
+    position: absolute;
+    padding: 0 0.5rem;
+
+}
+.input-buttons div:hover {
+    background-color: #0063d1;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+.input-buttons .minus {
+    left: 0;
+    top: 15%;
+}
+
+.input-buttons .plus {
+    left: 30%;
+    top: 15%;
+}
+.buttonShop-Mobile {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .productBox {
+        margin: 0 auto;
+        width: 95%;
+        background-color: #fff;
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: 520px 1fr;
+    }
+    
+}
+@media screen and (max-width: 768px) {
+
+    .buttonShop-Mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        justify-content: space-evenly;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        background-color: #fff;
+        border-top: 1px solid #bab6b6;
+        z-index: 999;
+    }
+    .productPrice.desktop {
+        display: none;
+    }
+    .productPrice {
+        margin-top: 1rem;
+    }
+    .buttonShop-MobileSection {
+        margin-bottom: 1rem;
+    }
+
+    .btnShop.desktop {
+        display: none;
+    }
+
+    .productBox {
+        width: 100%;
+        grid-template-columns:1fr;
+    }
+    .productImage img {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+

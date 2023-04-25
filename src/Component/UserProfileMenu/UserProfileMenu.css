@@ -1,0 +1,47 @@
+.menu-user {
+    border: 1px solid rgba(196, 192, 192, 0.338);
+    border-radius: 20px;
+}
+.menu-user .menu-icon {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.menu-user .menu-icon img {
+    width: 65px;
+}
+
+.menu-user .menu-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-user .menu-items ul{
+    width: 100%;
+    text-align: center;
+}
+.menu-user .menu-items ul a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.menu-user .menu-items ul li {
+    position: relative;
+    padding: 1rem;
+    margin-top: 1rem;
+    transition: all 0.5s ease;
+    width: 100%;
+}
+.menu-user .menu-items ul li:hover {
+    background-color: rgba(27, 63, 179, 0.2);
+    color: rgb(14, 104, 194);
+}
+.menu-user .menu-items ul li.active{
+    background-color: rgba(27, 63, 179, 0.2);
+    color: rgb(14, 104, 194);
+    border-right: 0.5rem solid rgb(14, 104, 194);
+}
