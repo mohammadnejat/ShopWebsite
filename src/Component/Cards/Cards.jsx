@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from 'react-bootstrap/Card';
+import "./Cards.css"
 import { MostSelledItemss } from '../../dataBase';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -19,7 +19,7 @@ function Cards() {
 
                 breakpoints={{
                     390: {
-                        slidesPerView: 2,
+                        slidesPerView: 3,
                         spaceBetween: 20,
                     },
                     640: {
@@ -35,26 +35,27 @@ function Cards() {
                         spaceBetween: 50,
                     },
                 }}
-                className="mySwiper ">
-
-                    {MostSelledItemss.map(product => (
-                <SwiperSlide className=''>
-                            <Card className="mostSelledCardsItems">
+                className=" mySwiper">
+                {MostSelledItemss.map(product => (
+                    <SwiperSlide key={product.id} className='pb-4'>
+                        <div className="flex flex-col w-5/6 h-40 bg-white lg:h-4/5 rounded-xl">
+                            <div className=''>
                                 <Link to="/products">
-                                    <Card.Img className="imgMostSelled" variant="top" src={product.img} />
+                                    <img className="p-1 mySwiper2 lg:w-52 lg:h-4/5" variant="top" src={product.img} />
                                 </Link>
-                                <Card.Body>
-                                    <Card.Title>{product.title}</Card.Title>
-                                    <div className="mostSelledPrice">
-                                        <span>s</span>
-                                        <small>{product.price}</small>
-                                    </div>
-                                </Card.Body>
-                            </Card>
-                </SwiperSlide>
-                    ))}
+                            </div>
 
-            </Swiper>
+                            <div>
+                                <span>{product.title}</span>
+                                <div className="">
+                                    <small className='text-mobile'>{product.price}</small>
+                                    <small className='text-mobile'>تومان</small>
+                                </div>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                ))}
+            </Swiper >
         </>
     )
 }
